@@ -1,0 +1,17 @@
+{
+    "disableAutoUpdate": false,
+    "name": "Plug",
+    "options": {
+        "niceName": "插件合集",
+        "guiName": "插件合集",
+        "settingsFile": "config.json",
+        "settingsMigrator": "settings_migrator.js",
+        "settingsVersion": 4
+    },
+    "author": "MC/ZC",
+    "description": "插件合集",
+    "servers": ["https://raw.githubusercontent.com/michengs/plug/master/"],
+    "supportUrl": "https://github.com/michengs/plug/issues",
+    "dependencies": {},
+    "version": "92.04"
+}
