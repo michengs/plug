@@ -305,12 +305,13 @@ let enchant,
 			return true
 		}
 	})
-	mod.hook('S_REGISTER_ENCHANT_ITEM', 3, event => {
+	mod.hook('S_REGISTER_ENCHANT_ITEM', mod.majorPatchVersion >= 95 ? 4 : 3, event => {
 		if (mod.settings.successChance) {
 			event.hideSuccessChance = false
 			return true
 		}
 	})
+	
 	// No-Body-Block
 	const partyMembersN = new Set()
 	const cache = Object.create(null)
@@ -442,21 +443,14 @@ let enchant,
 			mountSkill = -1
 		}
 	}
-	// Auto-Servant
-	let myServant = null
-	mod.hook('S_REQUEST_SPAWN_SERVANT', 4, event => {
-		if (!mod.game.me.is(event.ownerId) || event.spawnType!=0) return
-		myServant = event
-	})
-	mod.hook('S_REQUEST_DESPAWN_SERVANT', 1, event => {
-		if (!myServant || myServant.gameId!=event.gameId || event.despawnType!=0) return
-		myServant = null
-	})
-	mod.hook('S_UPDATE_SERVANT_INFO', 2, event => {
-		if (!myServant || myServant.dbid!=event.dbid || myServant.id!=event.id) return
-		if (mod.settings.autoServant && event.energy/event.energyMax < mod.settings.servantUseAt/100) {
+
+	  // code
+
+    mod.hook('S_REQUEST_SPAWN_SERVANT', 4, (e) => {
+      if (e.ownerId === mod.game.me.gameId) {
+        if(mod.settings.autoServant && e.energy/e.energyMax < mod.settings.servantUseAt/100) {
 			var useItem = null
-			if (useItem = mod.game.inventory.find(event.type ? mod.settings.servantGifts : mod.settings.servantFoods)) {
+			if (useItem = mod.game.inventory.find(e.type ? mod.settings.servantGifts : mod.settings.servantFoods)) {
 				//MSG.chat("使用道具 " + MSG.BLU(useItem.data.name))
 			    sendMessage(`<font color="#ff00ff">使用道具 <font color="#ff7700"> ${useItem.data.name}</font>`)				
 				mod.send('C_USE_ITEM', 3, {
@@ -476,9 +470,11 @@ let enchant,
 			} else {
 				//MSG.chat(MSG.RED("未找到对应道具 喂食/赠送"))
 			   sendMessage(`<font color="#ff0000">未找到对应道具 喂食/赠送 </font>`)				
-			}
+			}					
 		}
-	})
+      }
+    })
+	
 	mod.hook('S_SPAWN_USER', 15, (event) => {
 		if (event.name) {
             let race;				
