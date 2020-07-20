@@ -1,7 +1,7 @@
 {
     "files": {
         "README.md": "406fcdc302510a629802387d2a4ce2b51faae64fa75b2a773e35816c4525a2e5",
-        "index.js": "8c7b21db23b6fa86a97a68d3cf8696293d1eae4b43e9c9d926aa791b7e182336",
+        "index.js": "6ea068b1e61605958bca2369fe2e998ab7a2128efe6b431753e1ce47faf43674",
         "module.json": "b6cd6e7e003b677798a5cab110f6df7b81afdabe6a60712427d2d407d21c70ee",
         "settings_migrator.js": "00f3d0c6be0b118ef5da8a3846be86a1af4d4632192e0988d0dc173ad7044a8c",
         "settings_structure.js": "b6ccd8080c1e9ad8d2594e5e26eca1f0d00dc231a01f1dccbce7c1151db5b5de",
@@ -57,17 +57,15 @@
         "S_PLAYER_CHANGE_FLIGHT_ENERGY": 1,
         "S_PLAY_MOVIE": 1,
         "S_PREMIUM_SLOT_DATALIST": 2,
-        "S_REGISTER_ENCHANT_ITEM": 3,
+        "S_REGISTER_ENCHANT_ITEM": [3,4],
         "S_REGISTER_EVOLUTION_ITEM": 3,
         "S_REQUEST_CONTRACT": 1,
-        "S_REQUEST_DESPAWN_SERVANT": 1,
         "S_REQUEST_SPAWN_SERVANT": 4,
         "S_SKILL_CATEGORY": 3,
         "S_SPAWN_DROPITEM": 8,
         "S_SPAWN_ME": 3,
         "S_SPAWN_USER": 15,
         "S_UNMOUNT_VEHICLE": 2,
-        "S_UPDATE_SERVANT_INFO": 2,
         "S_USER_LOCATION": 5,
         "S_USER_STATUS": 3,
         "S_WHISPER": 3
