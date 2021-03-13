@@ -8,7 +8,8 @@
 
 # 命令
 
-!set
+set
+
 
 
 Based on https://github.com/tera-mod/Tera-Plug-Ins
