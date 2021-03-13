@@ -1,9 +1,10 @@
 {
   "files": {
     "index.js": "fc9afae23a1d230aef24f6bfa0fa63d3c63c5271bc92778354154e0bae21c662",
+    "manifest.json": "acc6959fb22ab9bd11d3495ba55bd2ed22fba1d51f48d582ecd0cedad9100035",
     "module.json": "cabe585462b0fdc902f5033a057ed6fba926f1edfd82b3c0281538d5a5f8e99e",
     "Newtonsoft.Json.dll": "564e6201dbf6354460d9ca180f0752d50dd7496fff49e05f67a9af42a2e772c7",
-    "README.md": "3aabbd6824bac92733ffacfe15d153b79538f18b35eaa215debd2430851d66b1",
+    "README.md": "18eb4c247db461c9f2b165aa1a956b70f5ed92dfe87aead11fb69f9ff4dcc372",
     "settings_migrator.js": "35b4b69e41c4779bbf8bd0ff2c55452c15fcb25b489d5fbe6da4e4f2d6d704a6",
     "settings_structure.js": "430f9f81265c6ca48e4da496cbffdc657a314b76e0dec2fd45e1ae01b8c4f049",
     "voice/voice.js": "26392d9b9c6c5d3d288d5f35783bae5345de034f880773c8ef024998ee11b646"
